@@ -70,10 +70,8 @@ export function AgriInputs() {
             <TableHead>Área</TableHead>
             <TableHead>Técnico</TableHead>
             <TableHead>Produtores</TableHead>
-            <TableHead>Semente X</TableHead>
-            <TableHead>Semente X</TableHead>
-            <TableHead>Semente Y</TableHead>
-            <TableHead>Semente Y</TableHead>
+            <TableHead colSpan={2} className="text-center">Semente X</TableHead>
+            <TableHead colSpan={2} className="text-center">Semente Y</TableHead>
           </TableRow>
 
           <TableRow>
@@ -81,11 +79,11 @@ export function AgriInputs() {
             <TableHead></TableHead>
             <TableHead></TableHead>
             <TableHead></TableHead>
-            <TableHead>Distribuídos (Semente X)</TableHead>
-            <TableHead>Recebidos (Semente X)</TableHead>
-            <TableHead>Distribuídos (Semente Y)</TableHead>
-            <TableHead>Recebidos (Semente Y)</TableHead>
-          </TableRow>
+            <TableHead className="text-center">Distribuídos (Semente X)</TableHead>
+            <TableHead className="text-center">Recebidos (Semente X)</TableHead>
+            <TableHead className="text-center">Distribuídos (Semente Y)</TableHead>
+            <TableHead className="text-center">Recebidos (Semente Y)</TableHead>
+          </TableRow> 
         </TableHeader>
         <TableBody>
           {data.sectors.map((sector, index) => {
@@ -101,11 +99,11 @@ export function AgriInputs() {
                 <TableCell>{sector.name}</TableCell>
                 <TableCell>-</TableCell>
                 <TableCell>-</TableCell>
-                <TableCell>{sector.totalFarmers}</TableCell>
-                <TableCell>{sementeX.sent}</TableCell>
-                <TableCell>{sementeX.received}</TableCell>
-                <TableCell>{sementeY.sent}</TableCell>
-                <TableCell>{sementeY.received}</TableCell>
+                <TableCell className="text-center">{sector.totalFarmers}</TableCell>
+                <TableCell className="text-center">{sementeX.sent}</TableCell>
+                <TableCell className="text-center">{sementeX.received}</TableCell>
+                <TableCell className="text-center">{sementeY.sent}</TableCell>
+                <TableCell className="text-center">{sementeY.received}</TableCell>
               </TableRow>
             );
           })}
