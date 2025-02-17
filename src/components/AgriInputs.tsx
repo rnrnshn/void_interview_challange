@@ -111,11 +111,11 @@ export function AgriInputs() {
             <TableCell>Totais</TableCell>
             <TableCell>-</TableCell>
             <TableCell>-</TableCell>
-            <TableCell>{totalProdutores}</TableCell>
-            <TableCell>0.00</TableCell>
-            <TableCell>{totalSementeX}</TableCell>
-            <TableCell>0.00</TableCell>
-            <TableCell>{totalSementeY}</TableCell>
+            <TableCell className="text-center">{totalProdutores}</TableCell>
+            <TableCell className="text-center">0.00</TableCell>
+            <TableCell className="text-center">{totalSementeX}</TableCell>
+            <TableCell className="text-center">0.00</TableCell>
+            <TableCell className="text-center">{totalSementeY}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
