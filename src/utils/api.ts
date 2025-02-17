@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const api = axios.create({
@@ -24,4 +25,20 @@ export const fetchAgriInputs = async () => {
   );
   console.log(response.data.data);
   return response.data.data;
+};
+
+export const fetchReports = async () => {
+  const response = await api.get(
+    "/last-week/de190ded-d23c-410c-89ac-89faf4dfb36a?=&_limit=10"
+  );
+  console.log(response.data);
+  return response.data;
+};
+
+export const useReports = () => {
+  return useQuery({
+    queryKey: ["reports"],
+    queryFn: fetchReports,
+    staleTime: 5 * 60 * 1000, // Cache for 5 minutes
+  });
 };
