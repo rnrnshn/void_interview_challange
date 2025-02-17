@@ -10,6 +10,9 @@ import {
   TableRow,
 } from "../components/ui/table";
 
+import { FaArrowUp } from "react-icons/fa6";
+import { FaArrowDown } from "react-icons/fa6";
+
 export function AgriInputs() {
   const { data, status, error } = useQuery({
     queryKey: ["inputs"],
@@ -53,11 +56,11 @@ export function AgriInputs() {
         <h2 className="text-4xl font-semibold">Insumos</h2>
 
         <div className="grid grid-cols-2 gap-4">
-          <button className="flex justify-center  w-full rounded-md border border-input bg-black text-white px-3 py-3 text-base cursor-pointer">
-            Adicionar Distribuição
+          <button className="flex justify-center items-center gap-2 w-full rounded-md border border-input bg-black text-white px-3 py-3 text-base cursor-pointer">
+            <span>Adicionar Distribuição</span> <FaArrowUp />
           </button>
-          <button className="flex justify-center w-full rounded-md border border-input bg-black text-white px-6 py-3 text-base cursor-pointer">
-            Exportar Distribuição
+          <button className="flex justify-center items-center gap-2 w-full rounded-md border border-input bg-black text-white px-6 py-3 text-base cursor-pointer">
+            <span>Exportar Distribuição</span> <FaArrowDown />
           </button>
         </div>
       </div>
@@ -66,23 +69,23 @@ export function AgriInputs() {
         <TableCaption>Distribuição Viveiros</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead>Sector</TableHead>
-            <TableHead>Área</TableHead>
-            <TableHead>Técnico</TableHead>
-            <TableHead>Produtores</TableHead>
-            <TableHead colSpan={2} className="text-center">Semente X</TableHead>
-            <TableHead colSpan={2} className="text-center">Semente Y</TableHead>
+            <TableHead className="font-bold">Sector</TableHead>
+            <TableHead className="font-bold">Área</TableHead>
+            <TableHead className="font-bold">Técnico</TableHead>
+            <TableHead className="font-bold">Produtores</TableHead>
+            <TableHead colSpan={2} className="text-center font-bold">Semente X</TableHead>
+            <TableHead colSpan={2} className="text-center font-bold">Semente Y</TableHead>
           </TableRow>
 
-          <TableRow>
+          <TableRow className="font-bold">
             <TableHead></TableHead>
             <TableHead></TableHead>
             <TableHead></TableHead>
             <TableHead></TableHead>
-            <TableHead className="text-center">Distribuídos (Semente X)</TableHead>
-            <TableHead className="text-center">Recebidos (Semente X)</TableHead>
-            <TableHead className="text-center">Distribuídos (Semente Y)</TableHead>
-            <TableHead className="text-center">Recebidos (Semente Y)</TableHead>
+            <TableHead className="text-center font-bold">Distribuídos (Semente X)</TableHead>
+            <TableHead className="text-center font-bold">Recebidos (Semente X)</TableHead>
+            <TableHead className="text-center font-bold">Distribuídos (Semente Y)</TableHead>
+            <TableHead className="text-center font-bold">Recebidos (Semente Y)</TableHead>
           </TableRow> 
         </TableHeader>
         <TableBody>
