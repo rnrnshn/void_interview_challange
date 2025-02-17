@@ -42,7 +42,7 @@ export const ProgressReport = () => {
   }));
 
   return (
-    <div className="p-6">
+    <div className="max-w-7xl mx-auto pt-18">
       <h2 className="text-xl font-bold mb-6 text-black">Análises - Progresso</h2>
 
       <div className="flex gap-4 mb-4">
@@ -78,7 +78,7 @@ export const ProgressReport = () => {
       </div>
 
       <div className="overflow-x-auto">
-        <Table className="w-full border border-gray-700  text-black">
+        <Table className="w-full text-black">
           <TableCaption>Progresso Semanal</TableCaption>
           <TableHeader className="">
             <TableRow className="text-black font-bold">
